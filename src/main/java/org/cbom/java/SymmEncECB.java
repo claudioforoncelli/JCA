@@ -4,9 +4,8 @@ import javax.crypto.*;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
-import org.cbom.java.Utils;
 
-public class SymmEncDemo {
+public class SymmEncECB {
 
     public static void testAES() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
         KeyGenerator generator = KeyGenerator.getInstance("AES");
