@@ -1,0 +1,6 @@
+projectKey=org.example:JCA
+serverUrl=https://localhost:9000
+serverVersion=25.3.0.104237
+dashboardUrl=https://localhost:9000/dashboard?id=org.example%3AJCA
+ceTaskId=b252e6ea-0f68-40b0-b74b-23d81f745d9d
+ceTaskUrl=https://localhost:9000/api/ce/task?id=b252e6ea-0f68-40b0-b74b-23d81f745d9d

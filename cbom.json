@@ -1,0 +1,134 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:d23472a3-cd70-4746-aeaa-d709bd088253",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-04-08T14:09:14Z",
+    "tools" : {
+      "components" : [ ],
+      "services" : [
+        {
+          "provider" : {
+            "name" : "IBM"
+          },
+          "name" : "Sonar Cryptography Plugin",
+          "version" : "1.4.5"
+        }
+      ]
+    }
+  },
+  "components" : [
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ab4af37f-599f-418a-a049-d0f2edd52a57",
+      "name" : "AES128-ECB-PKCS5",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/SymmEncDemo.java",
+            "line" : 20,
+            "offset" : 24,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "mode" : "ecb",
+          "padding" : "pkcs5",
+          "cryptoFunctions" : [
+            "decrypt",
+            "encrypt"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e39fe50b-f27c-412d-9f4e-75b20e490b23",
+      "name" : "SHA256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/HashDemo.java",
+            "line" : 9,
+            "offset" : 38,
+            "additionalContext" : "java.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "060b08b4-9587-467f-81ae-1590505c155c",
+      "name" : "AES128",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/SymmEncDemo.java",
+            "line" : 12,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "30046d11-47e2-4326-a3f1-f5370211491e",
+      "name" : "secret-key@30046d11-47e2-4326-a3f1-f5370211491e",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/SymmEncDemo.java",
+            "line" : 12,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "30046d11-47e2-4326-a3f1-f5370211491e",
+      "dependsOn" : [
+        "060b08b4-9587-467f-81ae-1590505c155c"
+      ]
+    }
+  ]
+}
