@@ -1,10 +1,10 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:0a74b268-ef93-429a-ac86-38b4fa0d0308",
+  "serialNumber" : "urn:uuid:291d2f3b-2f35-45e7-99eb-25dadc754f25",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2025-04-08T17:00:41Z",
+    "timestamp" : "2025-04-09T09:14:30Z",
     "tools" : {
       "components" : [ ],
       "services" : [
@@ -21,7 +21,7 @@
   "components" : [
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "c2d2ed49-85b2-4861-90ad-89b87f664786",
+      "bom-ref" : "838c754b-4120-444e-9dcb-3b6497286e6c",
       "name" : "SHA256",
       "evidence" : {
         "occurrences" : [
@@ -47,7 +47,7 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "a1281d8d-a322-4cec-a717-9503055dc47a",
+      "bom-ref" : "eb2118c8-48c2-450f-8f14-807cad2b9086",
       "name" : "AES128-ECB-PKCS5",
       "evidence" : {
         "occurrences" : [
@@ -76,7 +76,7 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "a6cbc76e-56b5-4401-85e7-dcf3d3f0be39",
+      "bom-ref" : "3d93112f-0bbd-474f-a40d-2eb9d0d12906",
       "name" : "AES128-CBC-PKCS5",
       "evidence" : {
         "occurrences" : [
@@ -105,7 +105,7 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "5861aadf-8aee-4e0c-ab7a-d3b84c4581ea",
+      "bom-ref" : "84a239f6-a38a-44c2-8527-a3aa5db4d776",
       "name" : "AES128",
       "evidence" : {
         "occurrences" : [
@@ -137,30 +137,8 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "e4f1e27c-c780-4954-8de1-fb9fb6d2bc30",
-      "name" : "secret-key@e4f1e27c-c780-4954-8de1-fb9fb6d2bc30",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/SymmEncCBC.java",
-            "line" : 9,
-            "offset" : 33,
-            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "related-crypto-material",
-        "relatedCryptoMaterialProperties" : {
-          "type" : "secret-key",
-          "size" : 128
-        }
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "c3e62112-2b69-464a-8782-5c09b81f200e",
-      "name" : "iv@c3e62112-2b69-464a-8782-5c09b81f200e",
+      "bom-ref" : "16e46eaf-7454-48f7-9bb4-25bb39117397",
+      "name" : "iv@16e46eaf-7454-48f7-9bb4-25bb39117397",
       "evidence" : {
         "occurrences" : [
           {
@@ -181,8 +159,8 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "568f7e95-1c88-4d8d-8472-37aa6dfd65df",
-      "name" : "secret-key@568f7e95-1c88-4d8d-8472-37aa6dfd65df",
+      "bom-ref" : "38cdc181-3793-43d9-8ee1-f062d2ae627a",
+      "name" : "secret-key@38cdc181-3793-43d9-8ee1-f062d2ae627a",
       "evidence" : {
         "occurrences" : [
           {
@@ -200,25 +178,47 @@
           "size" : 128
         }
       }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "158a2989-aacf-4763-a1c0-43ab371cf8be",
+      "name" : "secret-key@158a2989-aacf-4763-a1c0-43ab371cf8be",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/SymmEncCBC.java",
+            "line" : 9,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
     }
   ],
   "dependencies" : [
     {
-      "ref" : "e4f1e27c-c780-4954-8de1-fb9fb6d2bc30",
+      "ref" : "3d93112f-0bbd-474f-a40d-2eb9d0d12906",
       "dependsOn" : [
-        "5861aadf-8aee-4e0c-ab7a-d3b84c4581ea"
+        "16e46eaf-7454-48f7-9bb4-25bb39117397"
       ]
     },
     {
-      "ref" : "a6cbc76e-56b5-4401-85e7-dcf3d3f0be39",
+      "ref" : "158a2989-aacf-4763-a1c0-43ab371cf8be",
       "dependsOn" : [
-        "c3e62112-2b69-464a-8782-5c09b81f200e"
+        "84a239f6-a38a-44c2-8527-a3aa5db4d776"
       ]
     },
     {
-      "ref" : "568f7e95-1c88-4d8d-8472-37aa6dfd65df",
+      "ref" : "38cdc181-3793-43d9-8ee1-f062d2ae627a",
       "dependsOn" : [
-        "5861aadf-8aee-4e0c-ab7a-d3b84c4581ea"
+        "84a239f6-a38a-44c2-8527-a3aa5db4d776"
       ]
     }
   ]

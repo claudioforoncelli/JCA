@@ -12,11 +12,34 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        
+
         <!-- SonarQube configuration -->
-    	<sonar.projectKey>org.example:JCA</sonar.projectKey>
-   	<sonar.projectName>JCA</sonar.projectName>
+        <sonar.projectKey>org.example:JCA</sonar.projectKey>
+        <sonar.projectName>JCA</sonar.projectName>
     </properties>
 
-</project>
+    <repositories>
+        <!-- Bouncy Castle Repository -->
+        <repository>
+            <id>bc-repo</id>
+            <url>https://www.bouncycastle.org/repo</url>
+        </repository>
+    </repositories>
 
+    <dependencies>
+        <!-- Bouncy Castle Provider (core cryptography) -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>1.76</version>
+        </dependency>
+
+        <!-- Bouncy Castle PKIX (certificates, CRLs, etc.) -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcpkix-jdk18on</artifactId>
+            <version>1.76</version>
+        </dependency>
+    </dependencies>
+
+</project>
