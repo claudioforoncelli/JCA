@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b1bc34-3bd3-4123-8b9f-571f512b2f69" name="Changes" comment="changed file names and added AES-CBC">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java" afterDir="false" />
+    <list default="true" id="26b1bc34-3bd3-4123-8b9f-571f512b2f69" name="Changes" comment="added BouncyCastleCryptoDemo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cbom.json" beforeDir="false" afterPath="$PROJECT_DIR$/cbom.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/JCA-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/JCA-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/.sonar_lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.BouncyCastleCryptoDemo.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -74,7 +72,8 @@
       <updated>1744130610435</updated>
       <workItem from="1744130612165" duration="177000" />
       <workItem from="1744130806991" duration="1143000" />
-      <workItem from="1744215254682" duration="639000" />
+      <workItem from="1744215254682" duration="1302000" />
+      <workItem from="1744275875257" duration="737000" />
     </task>
     <task id="LOCAL-00001" summary="changed pom and build.yml">
       <option name="closed" value="true" />
@@ -100,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744131889639</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added BouncyCastleCryptoDemo">
+      <option name="closed" value="true" />
+      <created>1744215948148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744215948148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +117,7 @@
     <MESSAGE value="changed pom and build.yml" />
     <MESSAGE value="upload files to repository" />
     <MESSAGE value="changed file names and added AES-CBC" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed file names and added AES-CBC" />
+    <MESSAGE value="added BouncyCastleCryptoDemo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added BouncyCastleCryptoDemo" />
   </component>
 </project>

@@ -27,7 +27,7 @@ public class BouncyCastleCryptoDemo {
 
         // RSA key pair generation
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA", "BC");
-        keyGen.initialize(2048);
+        keyGen.initialize(512);
         KeyPair keyPair = keyGen.generateKeyPair();
 
         // AES encryption/decryption
