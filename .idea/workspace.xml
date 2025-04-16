@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b1bc34-3bd3-4123-8b9f-571f512b2f69" name="Changes" comment="added BouncyCastleCryptoDemo">
+    <list default="true" id="26b1bc34-3bd3-4123-8b9f-571f512b2f69" name="Changes" comment="changed RSA key length from 2048 to 512">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cbom/java/NistRulesDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cbom.json" beforeDir="false" afterPath="$PROJECT_DIR$/cbom.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JCA-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/JCA-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,27 +34,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BouncyCastleCryptoDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BouncyCastleCryptoDemo.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.NistRulesDemo.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
@@ -73,7 +70,9 @@
       <workItem from="1744130612165" duration="177000" />
       <workItem from="1744130806991" duration="1143000" />
       <workItem from="1744215254682" duration="1302000" />
-      <workItem from="1744275875257" duration="737000" />
+      <workItem from="1744275875257" duration="3100000" />
+      <workItem from="1744545262270" duration="3374000" />
+      <workItem from="1744815613748" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="changed pom and build.yml">
       <option name="closed" value="true" />
@@ -107,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744215948148</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed RSA key length from 2048 to 512">
+      <option name="closed" value="true" />
+      <created>1744277009060</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744277009060</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +125,7 @@
     <MESSAGE value="upload files to repository" />
     <MESSAGE value="changed file names and added AES-CBC" />
     <MESSAGE value="added BouncyCastleCryptoDemo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added BouncyCastleCryptoDemo" />
+    <MESSAGE value="changed RSA key length from 2048 to 512" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed RSA key length from 2048 to 512" />
   </component>
 </project>
