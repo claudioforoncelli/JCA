@@ -1,10 +1,10 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:6cfd78ec-218e-48a5-b880-8da3a295df86",
+  "serialNumber" : "urn:uuid:ae8e84f8-0c1b-4aab-a28d-907ebada8ceb",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2025-04-10T09:19:54Z",
+    "timestamp" : "2025-05-07T21:44:58Z",
     "tools" : {
       "components" : [ ],
       "services" : [
@@ -21,7 +21,7 @@
   "components" : [
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "51fb88e9-9a20-455b-9178-5c135fec0413",
+      "bom-ref" : "01cd7b57-69d1-4bbd-a710-dd98cdb26296",
       "name" : "AES128-ECB-PKCS5",
       "evidence" : {
         "occurrences" : [
@@ -50,7 +50,447 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "8d4921a8-1872-4829-aa8a-62cd2ca778db",
+      "bom-ref" : "7eb9eaf7-ad9e-47c6-8ea7-3a24206ff642",
+      "name" : "secret-key@7eb9eaf7-ad9e-47c6-8ea7-3a24206ff642",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 37,
+            "offset" : 37,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key"
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "34ec56ce-85b0-4694-a446-5b988c9f0e3a",
+      "name" : "SHA1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 21,
+            "offset" : 29,
+            "additionalContext" : "java.security.MessageDigest#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/MessageDigest;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "160",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "1.3.14.3.2.26"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2b03a5ed-fd31-476f-9320-cffa2a49dcb7",
+      "name" : "secret-key@2b03a5ed-fd31-476f-9320-cffa2a49dcb7",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/SymmEncECB.java",
+            "line" : 11,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "afb96b63-8fae-49f6-af56-1224fc9e7bf3",
+      "name" : "3DES",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 27,
+            "offset" : 34,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 30,
+            "offset" : 18
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "168",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "21cf74f3-ea07-4fd3-b956-7682822c447a",
+      "name" : "HMAC-SHA256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 56,
+            "offset" : 19,
+            "additionalContext" : "javax.crypto.Mac#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/Mac;"
+          },
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 73,
+            "offset" : 35,
+            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        },
+        "oid" : "1.2.840.113549.2.9"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "6c104434-cec9-45c1-84a4-523f206060d6",
+      "name" : "password@6c104434-cec9-45c1-84a4-523f206060d6",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 74,
+            "offset" : 23,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "password",
+          "size" : 64
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "55f486e8-b6ae-4221-b546-dd45849bcd67",
+      "name" : "secret-key@55f486e8-b6ae-4221-b546-dd45849bcd67",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 68,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 512
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "88b38480-7ee3-4700-b536-c198b3bf3a22",
+      "name" : "iv@88b38480-7ee3-4700-b536-c198b3bf3a22",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 41,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "4c30e65e-b05f-45a3-82f9-61bd504f8b2b",
+      "name" : "PBKDF2-HMAC-SHA256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 73,
+            "offset" : 35,
+            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "kdf",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d02b7d9c-a7b1-495b-bb13-53dde635237e",
+      "name" : "HMAC-SHA512",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/DRBGTest.java",
+            "line" : 46,
+            "offset" : 20,
+            "additionalContext" : "org.bouncycastle.crypto.macs.HMac#<init>(Lorg/bouncycastle/crypto/Digest;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "mac",
+          "cryptoFunctions" : [
+            "tag"
+          ]
+        },
+        "oid" : "1.2.840.113549.2.11"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "cffb0eaa-743f-4d0c-9e5a-c6988a11289d",
+      "name" : "secret-key@cffb0eaa-743f-4d0c-9e5a-c6988a11289d",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 34,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7444fba2-cfa5-4d00-a616-a1f813b790c0",
+      "name" : "AES256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 59,
+            "offset" : 37,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 34,
+            "offset" : 33,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "52685035-4e23-44d6-b471-e0e403a1bd7a",
+      "name" : "salt@52685035-4e23-44d6-b471-e0e403a1bd7a",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 74,
+            "offset" : 23,
+            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "salt",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "efe3394f-e038-4adf-852e-0faa56ed72ba",
+      "name" : "AES512",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 68,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "512",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "7c50d8ef-3379-4f66-80a3-7b08e18a63ca",
+      "name" : "key@7c50d8ef-3379-4f66-80a3-7b08e18a63ca",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
+            "line" : 29,
+            "offset" : 34,
+            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 512
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "163e813b-52c2-4472-9cf1-26b774da4ec1",
+      "name" : "iv@163e813b-52c2-4472-9cf1-26b774da4ec1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/SymmEncCBC.java",
+            "line" : 19,
+            "offset" : 42,
+            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "initialization-vector",
+          "size" : 128
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "60287b98-7109-4cac-b262-cf1e83aed53c",
+      "name" : "SHA224",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 22,
+            "offset" : 31,
+            "additionalContext" : "java.security.MessageDigest#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/MessageDigest;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "224",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.4"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "ca43f532-64dc-4a4c-8cf1-5383b69937fd",
+      "name" : "secret-key@ca43f532-64dc-4a4c-8cf1-5383b69937fd",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 59,
+            "offset" : 37,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "related-crypto-material",
+        "relatedCryptoMaterialProperties" : {
+          "type" : "secret-key",
+          "size" : 256
+        }
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "2666a967-8e64-4577-82e3-6576ab0c926f",
       "name" : "RSA-512",
       "evidence" : {
         "occurrences" : [
@@ -76,7 +516,7 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "33dfd1f9-2902-4e78-b821-b341f53a44d9",
+      "bom-ref" : "567e60d4-b48e-4e9b-9362-d3029c44b222",
       "name" : "AES128-CBC-PKCS5",
       "evidence" : {
         "occurrences" : [
@@ -111,14 +551,14 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "0027d3ce-5bfb-4440-95c0-9e1bcebd1dc5",
-      "name" : "iv@0027d3ce-5bfb-4440-95c0-9e1bcebd1dc5",
+      "bom-ref" : "d60a0f8a-7ffb-4f3b-88ce-4b1819f26397",
+      "name" : "iv@d60a0f8a-7ffb-4f3b-88ce-4b1819f26397",
       "evidence" : {
         "occurrences" : [
           {
-            "location" : "src/main/java/org/cbom/java/SymmEncCBC.java",
-            "line" : 19,
-            "offset" : 42,
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 71,
+            "offset" : 37,
             "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
           }
         ]
@@ -133,110 +573,13 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "47791ddb-1240-4cf6-adf3-1d3b55586bc1",
-      "name" : "password@47791ddb-1240-4cf6-adf3-1d3b55586bc1",
+      "bom-ref" : "d021bbc2-b558-4dfe-a809-7384777873e1",
+      "name" : "secret-key@d021bbc2-b558-4dfe-a809-7384777873e1",
       "evidence" : {
         "occurrences" : [
           {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 74,
-            "offset" : 23,
-            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "related-crypto-material",
-        "relatedCryptoMaterialProperties" : {
-          "type" : "password",
-          "size" : 64
-        }
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "c5a4becb-4f88-4309-8855-fdbfcb0b25e8",
-      "name" : "iv@c5a4becb-4f88-4309-8855-fdbfcb0b25e8",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 41,
-            "offset" : 33,
-            "additionalContext" : "javax.crypto.spec.IvParameterSpec#<init>([B)V"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "related-crypto-material",
-        "relatedCryptoMaterialProperties" : {
-          "type" : "initialization-vector",
-          "size" : 128
-        }
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "c42f35bd-473f-43aa-9f82-03c6567f3f68",
-      "name" : "HMAC-SHA256",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 56,
-            "offset" : 19,
-            "additionalContext" : "javax.crypto.Mac#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/Mac;"
-          },
-          {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 73,
-            "offset" : 35,
-            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "algorithm",
-        "algorithmProperties" : {
-          "primitive" : "mac",
-          "cryptoFunctions" : [
-            "tag"
-          ]
-        },
-        "oid" : "1.2.840.113549.2.9"
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "bfb11a5f-e79f-4169-ac1f-8b8da322cdf3",
-      "name" : "secret-key@bfb11a5f-e79f-4169-ac1f-8b8da322cdf3",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/SymmEncCBC.java",
-            "line" : 9,
-            "offset" : 33,
-            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "related-crypto-material",
-        "relatedCryptoMaterialProperties" : {
-          "type" : "secret-key",
-          "size" : 128
-        }
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "4e9de270-274c-4eb6-ae7d-cd593ac37b6e",
-      "name" : "secret-key@4e9de270-274c-4eb6-ae7d-cd593ac37b6e",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 75,
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 68,
             "offset" : 31,
             "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
           }
@@ -245,13 +588,37 @@
       "cryptoProperties" : {
         "assetType" : "related-crypto-material",
         "relatedCryptoMaterialProperties" : {
-          "type" : "secret-key"
+          "type" : "secret-key",
+          "size" : 512
         }
       }
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "3ea029b9-1105-49cd-8718-8d666123bc0f",
+      "bom-ref" : "3b04d579-3e56-43a9-a551-4e24541b4a71",
+      "name" : "AES",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "location" : "src/main/java/org/cbom/java/DRBGTest.java",
+            "line" : 58,
+            "offset" : 20,
+            "additionalContext" : "org.bouncycastle.crypto.engines.AESEngine#<init>()V"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "block-cipher",
+          "parameterSetIdentifier" : "128"
+        },
+        "oid" : "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "875ac1e8-49ba-4453-9c03-760a167c729c",
       "name" : "SHA256",
       "evidence" : {
         "occurrences" : [
@@ -301,36 +668,35 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "ba911e64-2db4-4a60-a905-1fdef7ab68c3",
-      "name" : "key@ba911e64-2db4-4a60-a905-1fdef7ab68c3",
+      "bom-ref" : "f351b147-74b4-46c2-945e-06a3dd95d536",
+      "name" : "secret-key@f351b147-74b4-46c2-945e-06a3dd95d536",
       "evidence" : {
         "occurrences" : [
           {
             "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 29,
-            "offset" : 34,
-            "additionalContext" : "java.security.KeyPairGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;"
+            "line" : 75,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.spec.SecretKeySpec#<init>([BLjava/lang/String;)V"
           }
         ]
       },
       "cryptoProperties" : {
         "assetType" : "related-crypto-material",
         "relatedCryptoMaterialProperties" : {
-          "type" : "secret-key",
-          "size" : 512
+          "type" : "secret-key"
         }
       }
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "be7beaee-6912-4338-8308-67160c2bbb4a",
-      "name" : "secret-key@be7beaee-6912-4338-8308-67160c2bbb4a",
+      "bom-ref" : "37fbeaf7-760d-403b-921c-a474b517b695",
+      "name" : "secret-key@37fbeaf7-760d-403b-921c-a474b517b695",
       "evidence" : {
         "occurrences" : [
           {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 34,
-            "offset" : 33,
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 27,
+            "offset" : 34,
             "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
           }
         ]
@@ -339,38 +705,13 @@
         "assetType" : "related-crypto-material",
         "relatedCryptoMaterialProperties" : {
           "type" : "secret-key",
-          "size" : 256
+          "size" : 168
         }
       }
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "a17fa136-3345-4113-b503-e8815c21791c",
-      "name" : "PBKDF2-HMAC-SHA256",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 73,
-            "offset" : 35,
-            "additionalContext" : "javax.crypto.SecretKeyFactory#getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "algorithm",
-        "algorithmProperties" : {
-          "primitive" : "kdf",
-          "parameterSetIdentifier" : "256",
-          "cryptoFunctions" : [
-            "keygen"
-          ]
-        }
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "a175fcad-91ec-4214-88b2-fe224a352b85",
+      "bom-ref" : "a60ce888-f4a4-42a5-91cf-d61911ab4a73",
       "name" : "AES128",
       "evidence" : {
         "occurrences" : [
@@ -385,6 +726,18 @@
             "line" : 11,
             "offset" : 33,
             "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 37,
+            "offset" : 37,
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+          },
+          {
+            "location" : "src/main/java/org/cbom/java/NistRulesDemo.java",
+            "line" : 70,
+            "offset" : 31,
+            "additionalContext" : "javax.crypto.Cipher#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/Cipher;"
           },
           {
             "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
@@ -408,7 +761,7 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "d82c5826-ede5-43c0-8da5-ad4d0f5f8bfc",
+      "bom-ref" : "9e79fc2b-63c7-402b-9a50-462274aa69a7",
       "name" : "SHA256withRSA",
       "evidence" : {
         "occurrences" : [
@@ -435,56 +788,30 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "55856016-3d12-4004-8686-c1e1a85db135",
-      "name" : "AES256",
+      "bom-ref" : "b4292174-3dab-4852-9081-977085137759",
+      "name" : "secret-key@b4292174-3dab-4852-9081-977085137759",
       "evidence" : {
         "occurrences" : [
           {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 34,
+            "location" : "src/main/java/org/cbom/java/SymmEncCBC.java",
+            "line" : 9,
             "offset" : 33,
-            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
-          }
-        ]
-      },
-      "cryptoProperties" : {
-        "assetType" : "algorithm",
-        "algorithmProperties" : {
-          "primitive" : "block-cipher",
-          "parameterSetIdentifier" : "256",
-          "cryptoFunctions" : [
-            "keygen"
-          ]
-        },
-        "oid" : "2.16.840.1.101.3.4.1"
-      }
-    },
-    {
-      "type" : "cryptographic-asset",
-      "bom-ref" : "77667841-893b-4645-b796-5f176d1d9404",
-      "name" : "salt@77667841-893b-4645-b796-5f176d1d9404",
-      "evidence" : {
-        "occurrences" : [
-          {
-            "location" : "src/main/java/org/cbom/java/BouncyCastleCryptoDemo.java",
-            "line" : 74,
-            "offset" : 23,
-            "additionalContext" : "javax.crypto.spec.PBEKeySpec#<init>([C[BII)V"
+            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
           }
         ]
       },
       "cryptoProperties" : {
         "assetType" : "related-crypto-material",
         "relatedCryptoMaterialProperties" : {
-          "type" : "salt",
+          "type" : "secret-key",
           "size" : 128
         }
       }
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "a0c1bc4d-b9ff-419e-9fac-a2111195555c",
-      "name" : "secret-key@a0c1bc4d-b9ff-419e-9fac-a2111195555c",
+      "bom-ref" : "44d7c76b-e0c0-4255-86bf-322ade98081c",
+      "name" : "secret-key@44d7c76b-e0c0-4255-86bf-322ade98081c",
       "evidence" : {
         "occurrences" : [
           {
@@ -505,89 +832,136 @@
     },
     {
       "type" : "cryptographic-asset",
-      "bom-ref" : "8f7f43f2-e29f-4f12-a3cf-44b16518e87a",
-      "name" : "secret-key@8f7f43f2-e29f-4f12-a3cf-44b16518e87a",
+      "bom-ref" : "796a1e06-6f98-4c24-8691-fa9ff32662df",
+      "name" : "SHA512",
       "evidence" : {
         "occurrences" : [
           {
-            "location" : "src/main/java/org/cbom/java/SymmEncECB.java",
-            "line" : 11,
-            "offset" : 33,
-            "additionalContext" : "javax.crypto.KeyGenerator#getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;"
+            "location" : "src/main/java/org/cbom/java/DRBGTest.java",
+            "line" : 46,
+            "offset" : 29,
+            "additionalContext" : "org.bouncycastle.crypto.digests.SHA512Digest#<init>()V"
           }
         ]
       },
       "cryptoProperties" : {
-        "assetType" : "related-crypto-material",
-        "relatedCryptoMaterialProperties" : {
-          "type" : "secret-key",
-          "size" : 128
-        }
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "512",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.3"
       }
     }
   ],
   "dependencies" : [
     {
-      "ref" : "bfb11a5f-e79f-4169-ac1f-8b8da322cdf3",
+      "ref" : "ca43f532-64dc-4a4c-8cf1-5383b69937fd",
       "dependsOn" : [
-        "a175fcad-91ec-4214-88b2-fe224a352b85"
+        "7444fba2-cfa5-4d00-a616-a1f813b790c0"
       ]
     },
     {
-      "ref" : "4e9de270-274c-4eb6-ae7d-cd593ac37b6e",
+      "ref" : "f351b147-74b4-46c2-945e-06a3dd95d536",
       "dependsOn" : [
-        "a175fcad-91ec-4214-88b2-fe224a352b85"
+        "a60ce888-f4a4-42a5-91cf-d61911ab4a73"
       ]
     },
     {
-      "ref" : "a0c1bc4d-b9ff-419e-9fac-a2111195555c",
+      "ref" : "7eb9eaf7-ad9e-47c6-8ea7-3a24206ff642",
       "dependsOn" : [
-        "47791ddb-1240-4cf6-adf3-1d3b55586bc1",
-        "77667841-893b-4645-b796-5f176d1d9404",
-        "a17fa136-3345-4113-b503-e8815c21791c"
+        "a60ce888-f4a4-42a5-91cf-d61911ab4a73"
       ]
     },
     {
-      "ref" : "33dfd1f9-2902-4e78-b821-b341f53a44d9",
+      "ref" : "cffb0eaa-743f-4d0c-9e5a-c6988a11289d",
       "dependsOn" : [
-        "0027d3ce-5bfb-4440-95c0-9e1bcebd1dc5",
-        "c5a4becb-4f88-4309-8855-fdbfcb0b25e8"
+        "7444fba2-cfa5-4d00-a616-a1f813b790c0"
       ]
     },
     {
-      "ref" : "8f7f43f2-e29f-4f12-a3cf-44b16518e87a",
+      "ref" : "567e60d4-b48e-4e9b-9362-d3029c44b222",
       "dependsOn" : [
-        "a175fcad-91ec-4214-88b2-fe224a352b85"
+        "163e813b-52c2-4472-9cf1-26b774da4ec1",
+        "88b38480-7ee3-4700-b536-c198b3bf3a22"
       ]
     },
     {
-      "ref" : "c42f35bd-473f-43aa-9f82-03c6567f3f68",
+      "ref" : "44d7c76b-e0c0-4255-86bf-322ade98081c",
       "dependsOn" : [
-        "3ea029b9-1105-49cd-8718-8d666123bc0f"
+        "4c30e65e-b05f-45a3-82f9-61bd504f8b2b",
+        "6c104434-cec9-45c1-84a4-523f206060d6",
+        "52685035-4e23-44d6-b471-e0e403a1bd7a"
       ]
     },
     {
-      "ref" : "be7beaee-6912-4338-8308-67160c2bbb4a",
+      "ref" : "b4292174-3dab-4852-9081-977085137759",
       "dependsOn" : [
-        "55856016-3d12-4004-8686-c1e1a85db135"
+        "a60ce888-f4a4-42a5-91cf-d61911ab4a73"
       ]
     },
     {
-      "ref" : "a17fa136-3345-4113-b503-e8815c21791c",
+      "ref" : "d021bbc2-b558-4dfe-a809-7384777873e1",
       "dependsOn" : [
-        "c42f35bd-473f-43aa-9f82-03c6567f3f68"
+        "efe3394f-e038-4adf-852e-0faa56ed72ba"
       ]
     },
     {
-      "ref" : "ba911e64-2db4-4a60-a905-1fdef7ab68c3",
+      "ref" : "55f486e8-b6ae-4221-b546-dd45849bcd67",
       "dependsOn" : [
-        "8d4921a8-1872-4829-aa8a-62cd2ca778db"
+        "efe3394f-e038-4adf-852e-0faa56ed72ba"
       ]
     },
     {
-      "ref" : "d82c5826-ede5-43c0-8da5-ad4d0f5f8bfc",
+      "ref" : "7c50d8ef-3379-4f66-80a3-7b08e18a63ca",
       "dependsOn" : [
-        "3ea029b9-1105-49cd-8718-8d666123bc0f"
+        "2666a967-8e64-4577-82e3-6576ab0c926f"
+      ]
+    },
+    {
+      "ref" : "9e79fc2b-63c7-402b-9a50-462274aa69a7",
+      "dependsOn" : [
+        "875ac1e8-49ba-4453-9c03-760a167c729c"
+      ]
+    },
+    {
+      "ref" : "d02b7d9c-a7b1-495b-bb13-53dde635237e",
+      "dependsOn" : [
+        "796a1e06-6f98-4c24-8691-fa9ff32662df"
+      ]
+    },
+    {
+      "ref" : "21cf74f3-ea07-4fd3-b956-7682822c447a",
+      "dependsOn" : [
+        "875ac1e8-49ba-4453-9c03-760a167c729c"
+      ]
+    },
+    {
+      "ref" : "a60ce888-f4a4-42a5-91cf-d61911ab4a73",
+      "dependsOn" : [
+        "55f486e8-b6ae-4221-b546-dd45849bcd67",
+        "d60a0f8a-7ffb-4f3b-88ce-4b1819f26397"
+      ]
+    },
+    {
+      "ref" : "2b03a5ed-fd31-476f-9320-cffa2a49dcb7",
+      "dependsOn" : [
+        "a60ce888-f4a4-42a5-91cf-d61911ab4a73"
+      ]
+    },
+    {
+      "ref" : "37fbeaf7-760d-403b-921c-a474b517b695",
+      "dependsOn" : [
+        "afb96b63-8fae-49f6-af56-1224fc9e7bf3"
+      ]
+    },
+    {
+      "ref" : "4c30e65e-b05f-45a3-82f9-61bd504f8b2b",
+      "dependsOn" : [
+        "21cf74f3-ea07-4fd3-b956-7682822c447a"
       ]
     }
   ]

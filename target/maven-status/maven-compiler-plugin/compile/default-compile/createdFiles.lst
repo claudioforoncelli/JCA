@@ -1,6 +1,8 @@
 org/cbom/java/Main.class
+org/cbom/java/DRBGTest.class
+org/cbom/java/BouncyCastleCryptoDemo.class
 org/cbom/java/Utils.class
 org/cbom/java/SymmEncCBC.class
-org/cbom/java/BouncyCastleCryptoDemo.class
+org/cbom/java/NistRulesDemo.class
 org/cbom/java/SymmEncECB.class
 org/cbom/java/Hash.class
